@@ -1,16 +1,70 @@
-<header>
-  <h1>{{ title }}</h1>
-  <p>Global e-commerce order management platform - Angular frontend.</p>
+<header class="hero">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>Global e-commerce order management platform. Browse products, place orders, simulate payment, and track order status.</p>
+  </div>
 </header>
 
-<div class="main-container">
-  <div *ngIf="loading">Loading products...</div>
-  <div *ngIf="!loading && products.length === 0">No products available.</div>
+<section class="main-container">
+  <div class="catalog">
+    <h2>Product Catalog</h2>
+    <div *ngIf="loading" class="notice">Loading products...</div>
+    <div *ngIf="!loading && products.length === 0" class="notice">No products available.</div>
 
-  <div *ngFor="let product of products" class="product-card">
-    <h2>{{ product.name }}</h2>
-    <p>{{ product.description }}</p>
-    <p><strong>{{ product.price | currency:product.currency }}</strong></p>
-    <button>Place Order</button>
+    <div *ngFor="let product of products" class="product-card">
+      <img *ngIf="product.imageUrl" [src]="product.imageUrl" alt="{{ product.name }}" />
+      <div class="product-details">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>{{ product.price | currency:product.currency }}</strong></p>
+      </div>
+      <button class="primary" (click)="selectProduct(product)">Buy Now</button>
+    </div>
   </div>
-</div>
+
+  <div class="checkout-panel" *ngIf="selectedProduct">
+    <h2>Checkout</h2>
+    <div class="checkout-summary">
+      <h3>{{ selectedProduct.name }}</h3>
+      <p>{{ selectedProduct.description }}</p>
+      <p>Unit price: {{ selectedProduct.price | currency:selectedProduct.currency }}</p>
+      <label>
+        Quantity
+        <input type="number" min="1" [(ngModel)]="quantity" />
+      </label>
+      <p><strong>Total: {{ totalAmount | currency:selectedProduct.currency }}</strong></p>
+    </div>
+
+    <div class="form-group">
+      <label>Shipping Address</label>
+      <textarea [(ngModel)]="shippingAddress"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Billing Address</label>
+      <textarea [(ngModel)]="billingAddress"></textarea>
+    </div>
+
+    <button class="primary" (click)="placeOrder()">Create Order</button>
+
+    <div *ngIf="order" class="order-card">
+      <h3>Order {{ order.orderId }}</h3>
+      <p>Status: <strong>{{ order.status }}</strong></p>
+      <p>Amount: {{ order.totalAmount | currency:order.currency }}</p>
+      <p>Shipping Provider: {{ order.shippingProvider || 'Pending' }}</p>
+      <p *ngIf="order.trackingNumber">Tracking: {{ order.trackingNumber }}</p>
+
+      <div class="form-group">
+        <label>Payment token</label>
+        <input [(ngModel)]="paymentToken" placeholder="Enter test token" />
+      </div>
+      <button class="secondary" (click)="payNow()">Pay Now</button>
+      <button class="secondary" (click)="shipOrder()" [disabled]="order.status !== 'Paid'">Simulate Shipping</button>
+    </div>
+
+    <div *ngIf="paymentResult" class="status-box" [class.error]="!paymentResult.success">
+      {{ paymentResult.message }}
+    </div>
+    <div *ngIf="statusMessage && !paymentResult" class="status-box">{{ statusMessage }}</div>
+  </div>
+</section>

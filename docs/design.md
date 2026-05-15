@@ -230,5 +230,29 @@ flowchart TD
 ## Implementation Notes
 
 - The backend project uses ASP.NET Core Web API to serve orders, catalog, and payment endpoints.
-- The frontend project uses Angular components and services to present products, place orders, and show order status.
+- The frontend project uses Angular components and services to present products, place orders, process payment, and monitor order status.
+- The solution simulates payment gateway failures and retry logic, shipping provider assignment, and order status progression.
 - This repository is structured to present a realistic architecture and initial implementation for the evaluation exercise.
+
+## Bonus Challenges
+
+### Optimize for Cost
+- Use Azure Functions for event-driven workloads and pay-per-call pricing.
+- Cache static catalog data in Azure Cache for Redis to reduce database reads.
+- Use reserved capacity and autoscaling for predictable traffic.
+- Retain analytics storage only as long as needed and archive older records.
+
+### Improve Real-Time Updates
+- Use Azure SignalR Service for direct browser push updates to order status.
+- Use Kafka or Azure Event Hubs for durable backend event streaming and analytics ingestion.
+- Recommended pattern: use Kafka/Event Hubs for internal order events and SignalR for client notifications.
+
+### Handle Data Privacy
+- Minimize PII storage; store only required personal and shipping data.
+- Use Azure Key Vault for secrets and encrypt sensitive data at rest.
+- Add user data export/delete workflows and regional data residency controls.
+
+### A/B Testing
+- Use a feature-flag/experimentation service to assign variants per user.
+- Route browser sessions to page variants and collect behavior metrics.
+- Analyze conversion and engagement metrics in the analytics service.

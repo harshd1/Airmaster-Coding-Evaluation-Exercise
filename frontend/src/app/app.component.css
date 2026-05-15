@@ -1,16 +1,145 @@
-header {
-  margin-bottom: 1rem;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f5f7fb;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0f5ef5 0%, #4f7cff 100%);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 720px;
 }
 
 .main-container {
-  max-width: 960px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1.5rem;
+  padding: 0 1.5rem 2rem;
 }
 
-.product-card h2 {
-  margin: 0 0 0.5rem 0;
+.catalog {
+  display: grid;
+  gap: 1rem;
 }
 
-.product-card p {
-  margin: 0.25rem 0;
+.product-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.product-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #0f5ef5;
+  color: white;
+}
+
+button.secondary {
+  background: #eef2ff;
+  color: #1f2937;
+  margin-right: 0.5rem;
+}
+
+.checkout-panel {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.order-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group label {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0f5ef5;
+  box-shadow: 0 0 0 3px rgba(15, 94, 245, 0.12);
+}
+
+.status-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: #f0f9ff;
+  color: #0f5ef5;
+}
+
+.status-box.error {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.notice {
+  padding: 1rem;
+  border-radius: 12px;
+  background: #eff6ff;
+}
+
+@media (max-width: 1024px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
 }

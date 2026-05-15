@@ -12,6 +12,8 @@ This folder contains the C# ASP.NET Core backend implementation for the Airmaste
 
 - `GET /api/products`
 - `GET /api/products/{id}`
+- `GET /api/orders?userId={userId}`
 - `GET /api/orders/{orderId}`
 - `POST /api/orders`
 - `POST /api/payments`
+- `POST /api/orders/{orderId}/ship`
