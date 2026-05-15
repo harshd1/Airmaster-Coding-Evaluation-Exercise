@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/angular/cli/master/src/schema.json",
+  "version": 1,
+  "projects": {
+    "airmaster-frontend": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/airmaster-frontend",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.json",
+            "assets": ["src/favicon.ico"],
+            "styles": ["src/styles.css"],
+            "scripts": []
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "airmaster-frontend:build"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "airmaster-frontend"
+}

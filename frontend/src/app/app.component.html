@@ -1,0 +1,16 @@
+<header>
+  <h1>{{ title }}</h1>
+  <p>Global e-commerce order management platform - Angular frontend.</p>
+</header>
+
+<div class="main-container">
+  <div *ngIf="loading">Loading products...</div>
+  <div *ngIf="!loading && products.length === 0">No products available.</div>
+
+  <div *ngFor="let product of products" class="product-card">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p><strong>{{ product.price | currency:product.currency }}</strong></p>
+    <button>Place Order</button>
+  </div>
+</div>
