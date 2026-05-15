@@ -30,5 +30,8 @@
       }
     }
   },
-  "defaultProject": "airmaster-frontend"
+  "defaultProject": "airmaster-frontend",
+  "cli": {
+    "analytics": false
+  }
 }

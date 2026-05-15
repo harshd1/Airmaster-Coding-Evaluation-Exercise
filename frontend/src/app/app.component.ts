@@ -24,12 +24,16 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private orderService: OrderService) {}
 
   ngOnInit(): void {
+    console.log('Loading products...');
     this.orderService.getProducts().subscribe({
       next: data => {
+        console.log('Products loaded:', data);
         this.products = data;
         this.loading = false;
       },
-      error: () => {
+      error: (err) => {
+        console.error('Error loading products:', err);
+        this.statusMessage = 'Failed to load products. Please check if the backend is running.';
         this.loading = false;
       }
     });

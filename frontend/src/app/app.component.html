@@ -9,7 +9,8 @@
   <div class="catalog">
     <h2>Product Catalog</h2>
     <div *ngIf="loading" class="notice">Loading products...</div>
-    <div *ngIf="!loading && products.length === 0" class="notice">No products available.</div>
+    <div *ngIf="!loading && statusMessage" class="status-box error">{{ statusMessage }}</div>
+    <div *ngIf="!loading && products.length === 0 && !statusMessage" class="notice">No products available.</div>
 
     <div *ngFor="let product of products" class="product-card">
       <img *ngIf="product.imageUrl" [src]="product.imageUrl" alt="{{ product.name }}" />

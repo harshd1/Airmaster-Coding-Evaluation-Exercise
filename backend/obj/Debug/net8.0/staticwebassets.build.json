@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ideYRm7fg7/0qMkLV1OEy9IGKVUO0JjiBv2czaYBgAU=",
+  "Source": "AirmasterOrderApi",
+  "BasePath": "_content/AirmasterOrderApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
