@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AirmasterOrderApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50e4a1715a2cb149eacbfdf60c544976bf4bcfeb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+064e9f491cc8ffe76384af1bc99729e59ab34cd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AirmasterOrderApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AirmasterOrderApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

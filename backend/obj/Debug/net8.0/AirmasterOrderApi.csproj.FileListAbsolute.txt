@@ -1,13 +1,10 @@
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\AirmasterOrderApi.exe
-C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\AirmasterOrderApi.deps.json
-C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\AirmasterOrderApi.runtimeconfig.json
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\AirmasterOrderApi.dll
-C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\AirmasterOrderApi.pdb
-C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\AirmasterOrderApi.csproj.AssemblyReference.cache
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\AirmasterOrderApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\AirmasterOrderApi.AssemblyInfoInputs.cache
@@ -28,5 +25,3 @@ C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\AirmasterOrderApi.dll
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\refint\AirmasterOrderApi.dll
 C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\AirmasterOrderApi.pdb
-C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\AirmasterOrderApi.genruntimeconfig.cache
-C:\Users\harsh\Downloads\Airmaster-Coding-Evaluation-Exercise\backend\obj\Debug\net8.0\ref\AirmasterOrderApi.dll
